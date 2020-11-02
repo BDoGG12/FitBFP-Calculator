@@ -16,6 +16,6 @@ FitBFP Calculator is an app that helps individuals calculate their body fat perc
 14 - 20%: Athletes\
 21 - 24%: Fitness\
 25 - 31%: Average\
-32%+: Obese\
+32%+: Obese
 
 ### Screenshots
