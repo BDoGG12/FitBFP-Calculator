@@ -9,7 +9,8 @@ import UIKit
 
 class BFPViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var genderTextField: UITextField!
+
+    @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
@@ -23,7 +24,6 @@ class BFPViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        genderTextField.delegate = self
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -50,8 +50,8 @@ class BFPViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         
-        genderTextField.endEditing(true)
-                
+        genderSegmentedControl.isSelected = true
+        
         let age = ageSlider.value
         let height = heightSlider.value
         let weight = weightSlider.value
@@ -59,15 +59,18 @@ class BFPViewController: UIViewController, UITextFieldDelegate {
         let bmi = (weight / pow(height, 2)) * 703
         let maleBFP = (1.2 * bmi) + (0.23 * age) - 16.2
         let femaleBFP = (1.2 * bmi) + (0.23 * age) - 5.4
+
         
-        if genderTextField.text == "Male" || genderTextField.text == "Man" {
+        switch genderSegmentedControl.selectedSegmentIndex {
+        case 0:
             calculatorBrain.calculateMaleBFP(age: age, height: height, weight: weight)
             bfpValue = String(format: "%.0f%%", maleBFP)
-        } else {
+        case 1:
             calculatorBrain.calculateFemaleBFP(age: age, height: height, weight: weight)
             bfpValue = String(format: "%.0f%%", femaleBFP)
+        default:
+            return
         }
-        
         
         
         

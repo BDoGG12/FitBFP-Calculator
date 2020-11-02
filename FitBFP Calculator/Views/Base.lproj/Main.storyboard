@@ -37,14 +37,13 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8Ff-Im-3KL" userLabel="Gender Text Field">
-                                                <rect key="frame" x="304" y="0.0" width="70" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="55Y-2b-iIf"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
-                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YuX-T5-bLg">
+                                                <rect key="frame" x="247" y="0.0" width="127" height="35"/>
+                                                <segments>
+                                                    <segment title="Male"/>
+                                                    <segment title="Female"/>
+                                                </segments>
+                                            </segmentedControl>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="J1m-0I-r48"/>
@@ -59,8 +58,8 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32yrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9n-SD-h99">
-                                                <rect key="frame" x="331.5" y="0.0" width="42.5" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39yrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9n-SD-h99">
+                                                <rect key="frame" x="331" y="0.0" width="43" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -70,7 +69,7 @@
                                             <constraint firstAttribute="height" constant="34" id="nJK-He-AbV"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" minValue="0.0" maxValue="65" translatesAutoresizingMaskIntoConstraints="NO" id="zf9-H9-wVi">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="42" minValue="18" maxValue="65" translatesAutoresizingMaskIntoConstraints="NO" id="zf9-H9-wVi">
                                         <rect key="frame" x="-2" y="520" width="378" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="48E-M4-xSR"/>
@@ -170,7 +169,7 @@
                     <connections>
                         <outlet property="ageLabel" destination="d9n-SD-h99" id="RO1-1i-4dk"/>
                         <outlet property="ageSlider" destination="zf9-H9-wVi" id="hSV-Cc-MkI"/>
-                        <outlet property="genderTextField" destination="8Ff-Im-3KL" id="4OU-2j-AfM"/>
+                        <outlet property="genderSegmentedControl" destination="YuX-T5-bLg" id="z57-pP-QAH"/>
                         <outlet property="heightLabel" destination="gok-c8-7Me" id="tqn-NP-h30"/>
                         <outlet property="heightSlider" destination="UUx-cb-8IE" id="IbF-4Y-z07"/>
                         <outlet property="weightLabel" destination="M0b-sD-msI" id="pFG-2P-Vnw"/>
