@@ -19,3 +19,4 @@ FitBFP Calculator is an app that helps individuals calculate their body fat perc
 32%+: Obese
 
 ### Screenshots
+<img src="https://user-images.githubusercontent.com/46203817/97950016-1961c780-1d5b-11eb-9432-7fd8f3349ae4.png" width="200" height="500"/> <img src="https://user-images.githubusercontent.com/46203817/97950019-1f57a880-1d5b-11eb-9cb7-356a96d676f9.png" width="200" height="500"/> <img src="https://user-images.githubusercontent.com/46203817/97950022-21ba0280-1d5b-11eb-9cd9-27ed2ed225a5.png" width="200" height="500"/> <img src="https://user-images.githubusercontent.com/46203817/97950028-241c5c80-1d5b-11eb-9129-d9cc84d738ac.png" width="200" height="500"/>
